@@ -14,6 +14,7 @@ int printf_pointer(va_list val)
 	int i;
 
 	p = va_arg(val, void*);
+
 	if (p == NULL)
 	{
 		for (i = 0; s[i] != '\0'; i++)
@@ -24,6 +25,7 @@ int printf_pointer(va_list val)
 	}
 
 	a = (unsigned long int)p;
+
 	_putchar('0');
 	_putchar('x');
 	b = printf_hex_aux(a);
